@@ -5,21 +5,26 @@ inputs:
   project_name:
     description: 'The name of the Google Cloud project to create the subscription in.'
     required: true
-  service_id:
-    description: 'The ID of the Octue service in kebab case, optionally preceded by an organisation name (e.g. `wake-service` or `octue/example-service`)).'
+  service_namespace:
+    description: 'The namespace the Octue service belongs to in kebab case.'
+    required: true
+  service_name:
+    description: 'The name of the Octue service in kebab case, unique within its namespace.'
     required: true
   push_endpoint:
     description: "The HTTP/HTTPS endpoint of the service to push to. It should be fully formed and include the 'https://' prefix."
     required: true
   revision_tag:
-    description: 'The tag used as a suffix to the service ID when creating a Service Revision Unique Identifier (e.g. 1.0.7).'
+    description: "The service revision tag (e.g. 1.0.7). If this option isn't given, a random 'cool name' tag is generated e.g. 'curious-capybara'."
     required: false
+    default: ""
 
 runs:
    using: 'docker'
    image: 'Dockerfile'
    args:
      - ${{ inputs.project_name }}
-     - ${{ inputs.service_id }}
+     - ${{ inputs.service_namespace }}
+     - ${{ inputs.service_name }}
      - ${{ inputs.push_endpoint }}
      - ${{ inputs.revision_tag }}

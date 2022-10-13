@@ -26,6 +26,7 @@ jobs:
       - uses: octue/create-push-subscription@feature/add-github-action
         with:
           project_name: octue-amy
-          service_id: octue/my-test-service
+          service_namespace: octue
+          service_name: my-test-service
           push_endpoint: https://example.com/endpoint
           revision_tag: 1.3.4
