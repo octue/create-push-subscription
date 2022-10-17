@@ -4,7 +4,6 @@ version = "0.1.0"
 description = "A GitHub action that creates a Google Pub/Sub push subscription for an Octue service."
 authors = ["Marcus Lugg <marcus@octue.com>"]
 readme = "README.md"
-packages = [{include = "create_push_subscription"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
