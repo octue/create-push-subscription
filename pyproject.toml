@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "create-push-subscription"
+version = "0.1.0"
+description = "A GitHub action that creates a Google Pub/Sub push subscription for an Octue service."
+authors = ["Marcus Lugg <marcus@octue.com>"]
+readme = "README.md"
+packages = [{include = "create_push_subscription"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+octue = "0.40.0"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^2.20.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
