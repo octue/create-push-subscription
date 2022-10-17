@@ -1,7 +1,7 @@
 FROM python:3.10.7-slim
 
 # Install via `.zip` file to avoid having to add `git` to image.
-RUN pip install "create-push-subscription @ https://github.com/octue/create-push-subscription/archive/0.1.0.zip"
+RUN pip install https://github.com/octue/create-push-subscription/archive/main.zip
 
 COPY create_push_subscription/entrypoint.sh /entrypoint.sh
 
