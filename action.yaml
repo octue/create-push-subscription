@@ -1,9 +1,11 @@
 name: 'Create push subscription'
 description: 'Create a Google Pub/Sub push subscription for an Octue service.'
 author: 'Marcus Lugg'
+
 branding:
   icon: cloud
   color: blue
+
 inputs:
   project_name:
     description: 'The name of the Google Cloud project to create the subscription in.'
@@ -24,7 +26,7 @@ inputs:
 
 runs:
    using: 'docker'
-   image: 'Dockerfile'
+   image: 'docker://octue/create-push-subscription:0.1.0'
    args:
      - ${{ inputs.project_name }}
      - ${{ inputs.service_namespace }}
