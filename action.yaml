@@ -1,6 +1,9 @@
 name: 'Create push subscription'
 description: 'Create a Google Pub/Sub push subscription for an Octue service.'
 author: 'Marcus Lugg'
+branding:
+  icon: cloud
+  color: blue
 inputs:
   project_name:
     description: 'The name of the Google Cloud project to create the subscription in.'
