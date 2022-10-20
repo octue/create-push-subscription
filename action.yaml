@@ -19,17 +19,17 @@ inputs:
   push_endpoint:
     description: "The HTTP/HTTPS endpoint of the service to push to. It should be fully formed and include the 'https://' prefix."
     required: true
-  revision_tag:
+  service_revision_tag:
     description: "The service revision tag (e.g. 1.0.7). If this option isn't given, a random 'cool name' tag is generated e.g. 'curious-capybara'."
     required: false
     default: ""
 
 runs:
    using: 'docker'
-   image: 'docker://octue/create-push-subscription:0.1.0'
+   image: 'docker://octue/create-push-subscription:0.1.1'
    args:
      - ${{ inputs.project_name }}
      - ${{ inputs.service_namespace }}
      - ${{ inputs.service_name }}
      - ${{ inputs.push_endpoint }}
-     - ${{ inputs.revision_tag }}
+     - ${{ inputs.service_revision_tag }}
