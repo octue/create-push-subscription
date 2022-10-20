@@ -25,7 +25,7 @@ steps:
     run: echo "PACKAGE_VERSION=$(poetry version -s)" >> $GITHUB_OUTPUT
     # run: echo "PACKAGE_VERSION=$(python setup.py --version)" >> $GITHUB_OUTPUT  <- Use this instead if your package uses a `setup.py` file.
 
-  - uses: octue/create-push-subscription@0.1.1
+  - uses: octue/create-push-subscription@0.2.0
     with:
       project_name: <project-name>
       service_namespace: my-org
