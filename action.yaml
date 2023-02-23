@@ -19,6 +19,10 @@ inputs:
   push_endpoint:
     description: "The HTTP/HTTPS endpoint of the service to push to. It should be fully formed and include the 'https://' prefix."
     required: true
+  expiration_time:
+    description: "The number of seconds of inactivity after which the subscription should expire. If not provided, no expiration time is applied to the subscription."
+    required: false
+    default: ""
   service_revision_tag:
     description: "The service revision tag (e.g. 1.0.7). If this option isn't given, a random 'cool name' tag is generated e.g. 'curious-capybara'."
     required: false
@@ -26,10 +30,11 @@ inputs:
 
 runs:
    using: 'docker'
-   image: 'docker://octue/create-push-subscription:0.2.0'
+   image: 'docker://octue/create-push-subscription:0.2.1'
    args:
      - ${{ inputs.project_name }}
      - ${{ inputs.service_namespace }}
      - ${{ inputs.service_name }}
      - ${{ inputs.push_endpoint }}
+     - ${{ inputs.expiration_time }}
      - ${{ inputs.service_revision_tag }}
