@@ -319,14 +319,14 @@ grpc = ["grpcio (>=1.38.0,<2.0dev)"]
 
 [[package]]
 name = "google-cloud-pubsub"
-version = "2.14.1"
+version = "2.15.0"
 description = "Google Cloud Pub/Sub API client library"
 category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "google-cloud-pubsub-2.14.1.tar.gz", hash = "sha256:28b3c62021b04f78f9158c157dbfcaebe9ffb504edd2975ad0f228ebf0204c6f"},
-    {file = "google_cloud_pubsub-2.14.1-py2.py3-none-any.whl", hash = "sha256:d73a24ddfa49aaae17959ecb987ff92ee7ba0535dc5dbc10ce22136588ccaa09"},
+    {file = "google-cloud-pubsub-2.15.0.tar.gz", hash = "sha256:3ca557fc0d404f712a1da8412e71a55cd63b6a265975b0a6bec43ff8a355ed40"},
+    {file = "google_cloud_pubsub-2.15.0-py2.py3-none-any.whl", hash = "sha256:2833ddfe9aa42af94085971761eaa85005d542e3baf2dfa24d1b97f084e620b2"},
 ]
 
 [package.dependencies]
@@ -772,14 +772,14 @@ setuptools = "*"
 
 [[package]]
 name = "octue"
-version = "0.43.6"
+version = "0.43.7"
 description = "A package providing template applications for data services, and a python SDK to the Octue API."
 category = "main"
 optional = false
 python-versions = ">=3.7.1,<4.0.0"
 files = [
-    {file = "octue-0.43.6-py3-none-any.whl", hash = "sha256:5bed5ff869915c1a7e790979dc38eb4c9078c704ea57812807dc657726684c85"},
-    {file = "octue-0.43.6.tar.gz", hash = "sha256:c0a688acd2fa35cc66dca4682de8b66aaa392aa5fa45065b94ff68d866e28f36"},
+    {file = "octue-0.43.7-py3-none-any.whl", hash = "sha256:c622ffe48edeb893dea1bfe12ffb2158cad15db836a533d49c6495901e3f1c9a"},
+    {file = "octue-0.43.7.tar.gz", hash = "sha256:963c7d2ad9404ec76256b16caff105baf1f77f820def34755f99a1b483933b4f"},
 ]
 
 [package.dependencies]
@@ -1010,14 +1010,14 @@ six = ">=1.5"
 
 [[package]]
 name = "python-dotenv"
-version = "0.21.1"
+version = "1.0.0"
 description = "Read key-value pairs from a .env file and set them as environment variables"
 category = "main"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.8"
 files = [
-    {file = "python-dotenv-0.21.1.tar.gz", hash = "sha256:1c93de8f636cde3ce377292818d0e440b6e45a82f215c3744979151fa8151c49"},
-    {file = "python_dotenv-0.21.1-py3-none-any.whl", hash = "sha256:41e12e0318bebc859fcc4d97d4db8d20ad21721a6aa5047dd59f090391cb549a"},
+    {file = "python-dotenv-1.0.0.tar.gz", hash = "sha256:a8df96034aae6d2d50a4ebe8216326c61c3eb64836776504fcca410e5937a3ba"},
+    {file = "python_dotenv-1.0.0-py3-none-any.whl", hash = "sha256:f5971a9226b701070a4bf2c38c89e5a3f0d64de8debda981d1db98583009122a"},
 ]
 
 [package.extras]
@@ -1207,4 +1207,4 @@ watchdog = ["watchdog"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "5d39534d9734273c9cfd20b158d45943df9df045f02c1a83ff1a461b6fe2fb46"
+content-hash = "7305811bd380451ca14e029b728910ac23ae7b4fb5924a1aa87c1c7c856247e5"
