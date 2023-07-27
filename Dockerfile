@@ -1,7 +1,8 @@
 FROM python:3.10.7-slim
 
-# Install via `.zip` file to avoid having to add `git` to image.
-RUN pip install https://github.com/octue/create-push-subscription/archive/0.3.0.beta-0.zip
+RUN apt-get update -y && apt-get install -y --fix-missing git && rm -rf /var/lib/apt/lists/*
+
+RUN pip install git+https://github.com/octue/create-push-subscription.git@0.3.0.beta-0
 
 COPY create_push_subscription/entrypoint.sh /entrypoint.sh
 
