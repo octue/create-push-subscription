@@ -1,3 +1,3 @@
 #!/bin/sh -l
 
-octue deploy create-push-subscription $1 $2 $3 $4 --expiration-time=$5 --revision-tag=$6 --filter=$7
+octue deploy create-push-subscription $1 $2 $3 $4 --expiration-time=$5 --revision-tag=$6 --filter=$7 --subscription-suffix=$8

@@ -34,5 +34,6 @@ steps:
       push_endpoint: https://example.com/endpoint
       expiration_time: 86400  # optional
       filter: 'attributes.sender_type = "PARENT"'  # optional
+      subscription_suffix: something-useful  # optional
 
 ```

@@ -899,7 +899,7 @@ hdf5 = ["h5py (>=3.6,<4.0)"]
 type = "git"
 url = "https://github.com/octue/octue-sdk-python"
 reference = "better-support-asynchronous-questions"
-resolved_reference = "7c8069084d53e89b7cd93f2b04e4698993e236c1"
+resolved_reference = "79732f70b4d37b3c6025629fcb3c16be31a958b4"
 
 [[package]]
 name = "packaging"
