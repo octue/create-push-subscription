@@ -27,10 +27,14 @@ inputs:
     description: "The service revision tag (e.g. 1.0.7). If this option isn't given, a random 'cool name' tag is generated e.g. 'curious-capybara'."
     required: false
     default: ""
+  filter:
+    description: "An optional filter to apply to the subscription (see https://cloud.google.com/pubsub/docs/subscription-message-filter). If not provided, the default filter is applied. To disable filtering, provide an empty string."
+    required: false
+    default: 'attributes.sender_type = "PARENT"'
 
 runs:
    using: 'docker'
-   image: 'docker://octue/create-push-subscription:0.3.0'
+   image: 'docker://octue/create-push-subscription:0.4.0'
    args:
      - ${{ inputs.project_name }}
      - ${{ inputs.service_namespace }}
@@ -38,3 +42,4 @@ runs:
      - ${{ inputs.push_endpoint }}
      - ${{ inputs.expiration_time }}
      - ${{ inputs.service_revision_tag }}
+     - ${{ inputs.filter }}
