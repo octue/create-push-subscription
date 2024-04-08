@@ -33,7 +33,4 @@ steps:
       service_revision_tag: ${{ steps.get-package-version.outputs.PACKAGE_VERSION }}  # optional
       push_endpoint: https://example.com/endpoint
       expiration_time: 86400  # optional
-      filter: 'attributes.sender_type = "PARENT"'  # optional
-      subscription_suffix: something-useful  # optional
-
 ```
