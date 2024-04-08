@@ -27,14 +27,10 @@ inputs:
     description: "The service revision tag (e.g. 1.0.7). If this option isn't given, a random 'cool name' tag is generated e.g. 'curious-capybara'."
     required: false
     default: ""
-  filter:
-    description: "An optional filter to apply to the subscription (see https://cloud.google.com/pubsub/docs/subscription-message-filter). If not provided, the default filter is applied. To disable filtering, provide an empty string."
+  services_namespace:
+    description: "The services namespace to subscribe to."
     required: false
-    default: 'attributes.sender_type = "PARENT"'
-  subscription_suffix:
-    description: "An optional suffix to add to the end of the subscription name. This is useful when needing to create multiple subscriptions for the same topic (subscription names are unique)."
-    required: false
-    default: ""
+    default: 'octue.services'
 
 runs:
    using: 'docker'
@@ -46,5 +42,4 @@ runs:
      - ${{ inputs.push_endpoint }}
      - ${{ inputs.expiration_time }}
      - ${{ inputs.service_revision_tag }}
-     - ${{ inputs.filter }}
-     - ${{ inputs.subscription_suffix }}
+     - ${{ inputs.services_namespace }}
