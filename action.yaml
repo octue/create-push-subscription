@@ -27,10 +27,6 @@ inputs:
     description: "The service revision tag (e.g. 1.0.7). If this option isn't given, a random 'cool name' tag is generated e.g. 'curious-capybara'."
     required: false
     default: ""
-  services_namespace:
-    description: "The services namespace to subscribe to."
-    required: false
-    default: 'octue.services'
 
 runs:
    using: 'docker'
@@ -42,4 +38,3 @@ runs:
      - ${{ inputs.push_endpoint }}
      - ${{ inputs.expiration_time }}
      - ${{ inputs.service_revision_tag }}
-     - ${{ inputs.services_namespace }}
