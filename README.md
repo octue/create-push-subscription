@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 steps:
-  - uses: actions/checkout@v3
+  - uses: actions/checkout@v4
 
   - name: Authenticate with Google Cloud
     uses: google-github-actions/auth@v0.8.1
@@ -25,12 +25,12 @@ steps:
     run: echo "PACKAGE_VERSION=$(poetry version -s)" >> $GITHUB_OUTPUT
     # run: echo "PACKAGE_VERSION=$(python setup.py --version)" >> $GITHUB_OUTPUT  <- Use this instead if your package uses a `setup.py` file.
 
-  - uses: octue/create-push-subscription@0.2.2
+  - uses: octue/create-push-subscription@0.4.0
     with:
-      project_name: <project-name>
+      project_name: project-name
       service_namespace: my-org
       service_name: my-service
-      service_revision_tag: ${{ steps.get-package-version.outputs.PACKAGE_VERSION }}
+      service_revision_tag: ${{ steps.get-package-version.outputs.PACKAGE_VERSION }}  # optional
       push_endpoint: https://example.com/endpoint
-
+      expiration_time: 86400  # optional
 ```
