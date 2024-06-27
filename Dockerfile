@@ -2,7 +2,7 @@ FROM python:3.10.7-slim
 
 RUN apt-get update -y && apt-get install -y --fix-missing git && rm -rf /var/lib/apt/lists/*
 
-RUN pip install git+https://github.com/octue/create-push-subscription.git@0.4.1
+RUN pip install git+https://github.com/octue/create-push-subscription.git@0.4.1.beta-0
 
 COPY create_push_subscription/entrypoint.sh /entrypoint.sh
 

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "create-push-subscription"
-version = "0.4.1"
+version = "0.4.1.beta-0"
 description = "A GitHub action that creates a Google Pub/Sub push subscription for an Octue service."
 authors = ["Marcus Lugg <marcus@octue.com>"]
 readme = "README.md"
