@@ -1,5 +1,8 @@
+> [!NOTE] 
+> This GitHub action repository has been deprecated in favour of the new [Kueue service backend](https://github.com/octue/example-service-kueue), which doesn't require a push subscription per Twined service.
+
 # create-push-subscription
-A GitHub action that creates a Google Pub/Sub push subscription for an Octue service.
+A GitHub action that creates a Google Pub/Sub push subscription for an Octue Twined service.
 
 ## Usage
 To automatically create a push subscription on e.g. pull request merge / package release, add the following to your
